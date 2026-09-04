@@ -100,10 +100,10 @@ impl Connection {
                 let fk = CString::new("PRAGMA foreign_keys = ON;").unwrap();
                 sqlite3_exec(db, fk.as_ptr(), None, ptr::null_mut(), ptr::null_mut());
 
-                let wal = CString::new("PRAGMA journal_mode = WAL;").unwrap();
-                sqlite3_exec(db, wal.as_ptr(), None, ptr::null_mut(), ptr::null_mut());
+                // let wal = CString::new("PRAGMA journal_mode = WAL;").unwrap();
+                // sqlite3_exec(db, wal.as_ptr(), None, ptr::null_mut(), ptr::null_mut());
 
-                let sync = CString::new("PRAGMA synchronous = NORMAL;").unwrap();
+                let sync = CString::new("PRAGMA synchronous = FULL;").unwrap(); // prev was NORMAL
                 sqlite3_exec(db, sync.as_ptr(), None, ptr::null_mut(), ptr::null_mut());
             };
             Ok(Arc::new(Self { db }))

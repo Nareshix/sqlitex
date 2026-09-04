@@ -337,8 +337,6 @@ The default settings are
 ```sql
 PRAGMA busy_timeout = 5000;
 PRAGMA foreign_keys = ON;
-PRAGMA journal_mode = WAL;
-PRAGMA synchronous = NORMAL;
 ```
 
 To override these settings or add more PRAGMA statements, u can use the `execute()` . They are simple enough that it doesn't warrant placing them in a `sql!()` macro for compile time checks, although nothing is stopping u from doing that
