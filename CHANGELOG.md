@@ -2,6 +2,7 @@
 
 **follows `yyyy-mm-dd` format**
 
+## [0.4.2] - 2026-09-04
 ## [0.4.3] - 2026-05-15
 
 ## Bug fixes
