@@ -2,6 +2,15 @@
 
 **follows `yyyy-mm-dd` format**
 
+## [0.5.0] - 2026-09-07
+
+### 🚀 Features
+
+- *(connection)* Disable default WAL journal mode
+
+### ⚙️ Miscellaneous Tasks
+
+- Release
 ## [0.4.2] - 2026-09-04
 ## [0.4.3] - 2026-05-15
 
