@@ -1,0 +1,7 @@
+# release.toml
+
+# Automatically run git-cliff before cargo-release creates the release commit
+pre-release-hook = ["git-cliff", "--tag", "{{crate_name}}-v{{version}}", "-o", "CHANGELOG.md"]
+
+# Ensure CHANGELOG.md is committed with the release
+pre-release-commit-message = "chore: Release {{crate_name}} version {{version}}"
