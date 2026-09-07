@@ -1,4 +1,5 @@
 # release.toml (at the root of your repo)
+# may consider release-plz in future
 consolidate-commits = true
 shared-version = true
 pre-release-hook = ["git-cliff", "--unreleased", "--tag", "{{version}}", "--prepend", "CHANGELOG.md"]

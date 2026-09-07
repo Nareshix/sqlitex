@@ -103,7 +103,7 @@ impl Connection {
                 // let wal = CString::new("PRAGMA journal_mode = WAL;").unwrap();
                 // sqlite3_exec(db, wal.as_ptr(), None, ptr::null_mut(), ptr::null_mut());
 
-                let sync = CString::new("PRAGMA synchronous = FULL;").unwrap(); // prev was NORMAL
+                let sync = CString::new("PRAGMA synchronous = FULL;").unwrap(); // prev was NORMAL. Keep as FULL as this is sqlite default mode
                 sqlite3_exec(db, sync.as_ptr(), None, ptr::null_mut(), ptr::null_mut());
             };
             Ok(Arc::new(Self { db }))
